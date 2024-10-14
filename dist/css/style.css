@@ -1746,8 +1746,8 @@ svg path {
   }
 
   .integrations {
-    margin-top: 80px;
-    margin-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 
   .integrations__main .circle {

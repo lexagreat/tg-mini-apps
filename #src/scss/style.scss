@@ -634,8 +634,8 @@
       }
    }
    @media (max-width: $mobile) {
-      margin-top: 80px;
-      margin-bottom: 60px;
+      padding-top: 80px;
+      padding-bottom: 60px;
       &__main {
          .circle {
             width: calc(338 / 360 * 100vw);
