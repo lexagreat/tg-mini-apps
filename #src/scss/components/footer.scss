@@ -1,0 +1,133 @@
+.footer {
+   border-radius: 24px 24px 0px 0px;
+   background: linear-gradient(180deg, #022239 0%, #000 104.75%);
+   // .footer__wrapper
+
+   &__wrapper {
+      padding-top: 50px;
+      padding-bottom: 69px;
+      display: flex;
+      flex-direction: column;
+      gap: 104px;
+   }
+
+   // .footer__upper
+
+   &__upper {
+      display: flex;
+      gap: 24px;
+   }
+
+   // .footer__logo
+
+   &__logo {
+      width: 320px;
+      flex: 0 0 320px;
+      display: block;
+      margin-right: 370px;
+      img {
+         width: 100%;
+      }
+   }
+
+   // .footer__list
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .hidden {
+         display: none;
+      }
+      a {
+         color: #fff;
+         font-feature-settings: "liga" off, "clig" off;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: normal;
+         text-transform: lowercase;
+         transition: $transition;
+         @media (hover: hover) {
+            &:hover {
+               color: $blue;
+            }
+         }
+         &:active {
+            color: $blue;
+         }
+         &.blue {
+            color: $blue;
+            @media (hover: hover) {
+               &:hover {
+                  color: white;
+               }
+            }
+            &:active {
+               color: white;
+            }
+         }
+      }
+   }
+
+   // .footer__down
+
+   &__down {
+      display: flex;
+      gap: 370px;
+      color: #96989b;
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 14px;
+      font-style: normal;
+      line-height: normal;
+      span {
+         width: 320px;
+         flex: 0 0 320px;
+      }
+      a {
+         color: #96989b;
+      }
+   }
+   @media (max-width: $mobile) {
+      border-radius: 16px 16px 0px 0px;
+      &__wrapper {
+         padding-bottom: 51px;
+         padding-top: 24px;
+         gap: 0;
+         position: relative;
+      }
+      &__upper {
+         justify-content: space-between;
+      }
+      &__logo {
+         flex: 0 0 110px;
+         width: 110px;
+         margin-right: 0;
+         height: fit-content;
+      }
+      &__down {
+         translate: 0 -100%;
+         flex-direction: column;
+         gap: 4px;
+         font-size: 10px;
+         span {
+            flex: unset;
+            width: unset;
+         }
+      }
+      &__list {
+         flex: unset !important;
+         .hidden {
+            display: block;
+         }
+         li:has(.blue) {
+            position: absolute;
+            top: 80px;
+            left: 0;
+         }
+         &.second {
+            display: none;
+         }
+      }
+   }
+}

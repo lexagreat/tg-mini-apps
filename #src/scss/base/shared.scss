@@ -1,0 +1,71 @@
+.collapse:not(.collapse_show) {
+   display: none;
+}
+.container {
+   max-width: 1440px;
+   padding: 0 40px;
+   margin: 0 auto;
+   @media (max-width: $mobile) {
+      padding: 0 16px;
+   }
+}
+.wrapper {
+   background-color: black;
+   font-family: "TT Norms Pro", sans-serif;
+   min-height: 100vh;
+}
+
+.body-text {
+   font-size: 20px;
+   font-weight: 400;
+   line-height: calc(24 / 20);
+   color: rgba(150, 152, 155, 1);
+   @media (max-width: $mobile) {
+      font-size: 16px;
+   }
+}
+.h1 {
+   font-size: 64px;
+   font-weight: 500;
+   line-height: calc(77 / 64);
+   text-align: center;
+   color: white;
+   @media (max-width: $mobile) {
+      font-size: 24px;
+   }
+}
+.h2 {
+   font-size: 48px;
+   font-weight: 500;
+   line-height: calc(61 / 48);
+   text-align: center;
+   color: white;
+   span {
+      white-space: nowrap;
+      padding: 3px 12px;
+      border-radius: 40px;
+      background: linear-gradient(91deg, #0092ff 0.56%, #022239 136.72%);
+   }
+   @media (max-width: $mobile) {
+      font-size: 24px;
+   }
+}
+.h3 {
+   font-size: 36px;
+   font-weight: 500;
+   line-height: calc(43 / 36);
+   text-align: center;
+   color: white;
+   @media (max-width: $mobile) {
+      font-size: 20px;
+   }
+}
+.h4 {
+   font-size: 24px;
+   font-weight: 500;
+   line-height: 1;
+   color: white;
+   @media (max-width: $mobile) {
+      font-size: 16px;
+   }
+}
