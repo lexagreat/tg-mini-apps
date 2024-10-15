@@ -341,6 +341,12 @@
          grid-template-columns: 1fr;
          gap: 24px;
       }
+      &__title {
+         span {
+            margin-top: 4px;
+            display: inline-block;
+         }
+      }
    }
 }
 .why-item {

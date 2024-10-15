@@ -1671,6 +1671,11 @@ svg path {
     gap: 24px;
   }
 
+  .why__title span {
+    margin-top: 4px;
+    display: inline-block;
+  }
+
   .why-item {
     gap: 10px;
   }
