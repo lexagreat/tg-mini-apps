@@ -36,6 +36,11 @@ function initStepsSlider() {
       slidesPerView: "auto",
       spaceBetween: 16,
       centeredSlides: true,
+      mousewheel: {
+         enabled: true,
+         forceToAxis: true,
+         releaseOnEdges: true,
+      },
       breakpoints: {
          1024: {
             spaceBetween: 40,
@@ -47,6 +52,11 @@ function initCasesSlider() {
    const swiper = new Swiper(".cases .swiper", {
       slidesPerView: "auto",
       spaceBetween: 10,
+      mousewheel: {
+         enabled: true,
+         forceToAxis: true,
+         releaseOnEdges: true,
+      },
       breakpoints: {
          1024: {
             spaceBetween: 20,
@@ -164,30 +174,30 @@ function slideHide(el, duration = 500) {
       el.style["overflow"] = "";
    }, duration);
 }
-// Smooth Scroll
-const lenis = new Lenis({
-   duration: 2, // продолжительность скролла (в секундах)
-   smooth: true, // включить плавный скролл
-   direction: "vertical", // направление скролла
-});
-function raf(time) {
-   lenis.raf(time);
-   requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-   anchor.addEventListener("click", function (e) {
-      e.preventDefault();
+// // Smooth Scroll
+// const lenis = new Lenis({
+//    duration: 2, // продолжительность скролла (в секундах)
+//    smooth: true, // включить плавный скролл
+//    direction: "vertical", // направление скролла
+// });
+// function raf(time) {
+//    lenis.raf(time);
+//    requestAnimationFrame(raf);
+// }
+// requestAnimationFrame(raf);
+// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+//    anchor.addEventListener("click", function (e) {
+//       e.preventDefault();
 
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
+//       const targetId = this.getAttribute("href").substring(1);
+//       const targetElement = document.getElementById(targetId);
 
-      lenis.scrollTo(targetElement); // Используем метод lenis для плавной прокрутки
-   });
-});
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-   anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      lenis.scrollTo(this.getAttribute("href"));
-   });
-});
+//       lenis.scrollTo(targetElement); // Используем метод lenis для плавной прокрутки
+//    });
+// });
+// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+//    anchor.addEventListener("click", function (e) {
+//       e.preventDefault();
+//       lenis.scrollTo(this.getAttribute("href"));
+//    });
+// });

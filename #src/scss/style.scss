@@ -945,6 +945,10 @@
       opacity: 0.5;
       background: #0092ff;
       filter: blur(200.85000610351562px);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
       width: 1035px;
       pointer-events: none;
    }

@@ -1195,6 +1195,10 @@ html.lenis body {
   background: #0092ff;
   -webkit-filter: blur(200.8500061035px);
           filter: blur(200.8500061035px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
   width: 1035px;
   pointer-events: none;
 }
