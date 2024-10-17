@@ -3,6 +3,7 @@
 @import "components/style";
 
 .hero {
+   overflow: hidden;
    margin-top: 52px;
    border-radius: 0px 0px 24px 24px;
    background: linear-gradient(180deg, #000 0%, #0092ff 100%);
@@ -31,7 +32,41 @@
       align-items: center;
       flex-direction: column;
    }
-
+   &__images {
+      position: relative;
+      height: 900px;
+      width: 100%;
+      img {
+         position: absolute;
+         width: 583px;
+         aspect-ratio: 1;
+      }
+      .left {
+         left: 250px;
+         top: 0;
+      }
+      .right {
+         right: 350px;
+         top: 100px;
+      }
+      @media (max-width: 1440px) {
+         .left {
+            left: calc(150px + 100 * ((100vw - 1024px) / (1440 - 1024)));
+         }
+         .right {
+            right: calc(100px + 250 * ((100vw - 1024px) / (1440 - 1024)));
+         }
+      }
+      @media (max-width: 1024px) {
+         height: calc(450px + 450 * ((100vw - 320px) / (1024 - 320)));
+         img {
+            width: calc(300px + 283 * ((100vw - 320px) / (1024 - 320)));
+         }
+         .right {
+            right: calc(-60px + 140 * ((100vw - 320px) / (1024 - 320)));
+         }
+      }
+   }
    // .hero__title
 
    &__title {

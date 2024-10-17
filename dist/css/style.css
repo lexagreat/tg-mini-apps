@@ -3243,6 +3243,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .hero {
+  overflow: hidden;
   margin-top: 52px;
   border-radius: 0px 0px 24px 24px;
   background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#0092ff));
@@ -3284,6 +3285,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.hero__images {
+  position: relative;
+  height: 900px;
+  width: 100%;
+}
+
+.hero__images img {
+  position: absolute;
+  width: 583px;
+  aspect-ratio: 1;
+}
+
+.hero__images .left {
+  left: 250px;
+  top: 0;
+}
+
+.hero__images .right {
+  right: 350px;
+  top: 100px;
 }
 
 .hero__title {
@@ -4129,6 +4152,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @media (max-width: 1440px) {
+  .hero__images .left {
+    left: calc(150px + 100 * (100vw - 1024px) / 416);
+  }
+
+  .hero__images .right {
+    right: calc(100px + 250 * (100vw - 1024px) / 416);
+  }
+
   .examples__list {
     gap: 1.3888888889vw;
   }
@@ -4325,6 +4356,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   .footer__list.second {
     display: none;
+  }
+
+  .hero__images {
+    height: calc(450px + 450 * (100vw - 320px) / 704);
+  }
+
+  .hero__images img {
+    width: calc(300px + 283 * (100vw - 320px) / 704);
+  }
+
+  .hero__images .right {
+    right: calc(-60px + 140 * (100vw - 320px) / 704);
   }
 
   .hero {

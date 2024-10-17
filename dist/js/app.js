@@ -175,29 +175,54 @@ function slideHide(el, duration = 500) {
    }, duration);
 }
 // // Smooth Scroll
-const lenis = new Lenis({
-   duration: 1.5, // продолжительность скролла (в секундах)
-   smooth: true, // включить плавный скролл
-   direction: "vertical", // направление скролла
-});
-function raf(time) {
-   lenis.raf(time);
-   requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
+// const lenis = new Lenis({
+//    duration: 1.5, // продолжительность скролла (в секундах)
+//    smooth: true, // включить плавный скролл
+//    direction: "vertical", // направление скролла
+// });
+// function raf(time) {
+//    lenis.raf(time);
+//    requestAnimationFrame(raf);
+// }
+// requestAnimationFrame(raf);
+// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+//    anchor.addEventListener("click", function (e) {
+//       e.preventDefault();
+
+//       const targetId = this.getAttribute("href").substring(1);
+//       const targetElement = document.getElementById(targetId);
+
+//       lenis.scrollTo(targetElement); // Используем метод lenis для плавной прокрутки
+//    });
+// });
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
    anchor.addEventListener("click", function (e) {
       e.preventDefault();
-
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      lenis.scrollTo(targetElement); // Используем метод lenis для плавной прокрутки
+      // lenis.scrollTo(this.getAttribute("href"));
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+         behavior: "smooth",
+      });
    });
 });
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-   anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      lenis.scrollTo(this.getAttribute("href"));
-   });
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".hero__images .left", {
+   scrollTrigger: {
+      trigger: ".hero__running", // элемент, который должен запускать анимацию
+      start: "top 70%", // когда верх элемента достигает 80% высоты экрана
+      end: "bottom 0", // когда низ элемента достигает 20% высоты экрана
+      // markers: true, // включить маркеры для визуальной отладки
+      scrub: 1.5,
+   },
+   x: -1000,
+});
+gsap.to(".hero__images .right", {
+   scrollTrigger: {
+      trigger: ".hero__running", // элемент, который должен запускать анимацию
+      start: "top 70%", // когда верх элемента достигает 80% высоты экрана
+      end: "bottom 0", // когда низ элемента достигает 20% высоты экрана
+      // markers: true, // включить маркеры для визуальной отладки
+      scrub: 1.5,
+   },
+   x: 1000,
 });
