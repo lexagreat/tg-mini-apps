@@ -46,15 +46,15 @@ $duration: 10s;
    }
 }
 
-.marquee:hover .marquee__group {
-   animation-play-state: paused;
-}
+// .marquee:hover .marquee__group {
+//    animation-play-state: paused;
+// }
 
-@media (prefers-reduced-motion: reduce) {
-   .marquee__group {
-      animation-play-state: paused;
-   }
-}
+// @media (prefers-reduced-motion: reduce) {
+//    .marquee__group {
+//       animation-play-state: paused;
+//    }
+// }
 
 @keyframes scroll {
    0% {

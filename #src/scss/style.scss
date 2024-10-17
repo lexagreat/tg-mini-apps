@@ -1,3 +1,4 @@
+@import "fonts";
 @import "base/style";
 @import "components/style";
 
@@ -1028,7 +1029,7 @@
    &__footer {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 24px;
       div {
          align-items: center;
          display: flex;
