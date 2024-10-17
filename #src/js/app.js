@@ -36,6 +36,7 @@ function initStepsSlider() {
       slidesPerView: "auto",
       spaceBetween: 16,
       centeredSlides: true,
+      speed: 600,
       mousewheel: {
          enabled: true,
          forceToAxis: true,
