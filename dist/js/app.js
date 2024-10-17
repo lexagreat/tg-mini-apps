@@ -47,6 +47,41 @@ function initStepsSlider() {
          },
       },
    });
+   // wrapper.scrollWidth
+   const length = document.querySelectorAll(".steps .swiper-slide").length;
+   let pixelsForSlide = 400;
+   let lastScroll = 0; // Переменная для хранения последнего положения скролла
+   let cumulativeScroll = 0; // Переменная для накопления прокрутки
+   gsap.to(".steps", {
+      scrollTrigger: {
+         trigger: ".steps", // элемент, который должен запускать анимацию
+         start: "top 30%", // когда верх элемента достигает 80% высоты экрана
+         end: () => "+=" + length * pixelsForSlide + "px", // Динамическое значение для end
+         // markers: true, // Маркеры для отладки
+         scrub: 1.5,
+         pin: true, // Закрепляем элемент
+         invalidateOnRefresh: true, // Пересчитывает значения при обновлении страницы или изменения размера
+         onUpdate: (self) => {
+            const scrollPos = self.scroll(); // Текущее положение скролла
+            const direction = scrollPos > lastScroll ? "next" : "prev"; // Определение направления
+
+            // Увеличиваем накопленное количество прокрученных пикселей
+            cumulativeScroll += Math.abs(scrollPos - lastScroll);
+
+            // Если прокручено больше 200 пикселей
+            if (cumulativeScroll >= pixelsForSlide) {
+               if (direction === "next") {
+                  swiper.slideNext(); // Переход к следующему слайду
+               } else {
+                  swiper.slidePrev(); // Переход к предыдущему слайду
+               }
+               cumulativeScroll = 0; // Сброс накопленного скролла
+            }
+
+            lastScroll = scrollPos; // Обновление последнего положения скролла
+         },
+      },
+   });
 }
 function initCasesSlider() {
    const swiper = new Swiper(".cases .swiper", {
