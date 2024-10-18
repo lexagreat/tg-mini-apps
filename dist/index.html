@@ -26,7 +26,7 @@
             <li><a href="#cases">кейсы</a></li>
             <li><a href="#faq">faq</a></li>
          </ul>
-         <a href="#form" class="header__btn">оставить заявку</a>
+         <a href="#formModal" class="header__btn modal__link">оставить заявку</a>
       </div>
    </div>
 </header>
@@ -43,16 +43,16 @@
                   </h1>
                   <p class="hero__text body-text">Помогаем бизнесу автоматизировать и геймифицировать процессы с
                      мини-приложениями в Telegram</p>
-                  <button class="hero__btn">
+                  <a href="#formModal" class="hero__btn modal__link">
                      оставить заявку
-                  </button>
+                  </a>
                   <div class="hero__images">
                      <img src="img/hero-phone1.png" class="left" alt="">
                      <img src="img/hero-phone2.png" class="right" alt="">
                   </div>
-                  <button class="hero__btn mobile">
+                  <a href="#formModal" class="hero__btn mobile modal__link">
                      оставить заявку
-                  </button>
+                  </a>
                </div>
             </div>
             <div class="service-preferences__running runeline hero__running">
@@ -585,6 +585,58 @@
             </div>
          </section>
       </main>
+      <div class="modal" id="formModal">
+         <div class="modal__content scrollbar-none">
+            <div class="modal__close">
+               <img src="img/x.svg" alt="">
+            </div>
+            <div class="form__content">
+               <h2 class="h2">
+                  <span style="display: block; width: fit-content;">обсудить проект</span>
+                  Оставьте свои контактные данные и мы свяжемся с вами в течение 30 минут
+               </h2>
+               <div class="form__main">
+                  <div class="form__actions">
+                     <ul class="form__list">
+                        <li>
+                           <input type="text" placeholder="имя">
+                        </li>
+                        <li>
+                           <input type="text" placeholder="компания">
+                        </li>
+                        <li>
+                           <input type="text" data-phone placeholder="номер телефона">
+                        </li>
+                        <li>
+                           <input type="text" placeholder="email">
+                        </li>
+                     </ul>
+                     <p>
+                        Нажимая кнопку «Отправить», я соглашаюсь с правилами и условиями, указанными в
+                        <a href="https://oktta.ru/documents/Согласие_на_обработку_персональных_данных.pdf
+                        " target="_blank">Пользовательском соглашении</a> и разрешаю использовать и
+                        обрабатывать
+                        мои личные данные в
+                        соответствии с <a
+                           href="https://oktta.ru/documents/Политика_конфиденциальности_персональных_данных.pdf"
+                           target="_blank">Политикой конфиденциальности</a>.
+                     </p>
+                  </div>
+                  <div class="form__footer">
+                     <button class="form__button fill">отправить заявку</button>
+                     <div>
+                        <span></span>
+                        <p class="text">или</p>
+                        <span></span>
+                     </div>
+                     <a href="https://t.me/igolnaya" target="_blank" class="form__button transparent">Написать
+                        в
+                        telegram</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
       <footer class="footer">
    <div class="container">
       <div class="footer__wrapper">
