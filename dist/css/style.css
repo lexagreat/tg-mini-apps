@@ -3279,7 +3279,12 @@ body.lock {
   width: calc(100% - 32px);
   max-width: 900px;
   max-height: calc(100% - 32px);
-  overflow: auto;
+  height: 100;
+}
+
+.modal__content .form__content {
+  overflow-y: auto;
+  max-height: calc(100dvh - 32px);
 }
 
 .modal__close {

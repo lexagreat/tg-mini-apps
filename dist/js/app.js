@@ -245,7 +245,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".hero__images .left", {
    scrollTrigger: {
       trigger: ".hero__images", // элемент, который должен запускать анимацию
-      start: "top 50%", // когда верх элемента достигает 80% высоты экрана
+      start: "top 250px", // когда верх элемента достигает 80% высоты экрана
       end: "bottom 0", // когда низ элемента достигает 20% высоты экрана
       // markers: true, // включить маркеры для визуальной отладки
       scrub: 1.5,
@@ -256,7 +256,7 @@ gsap.to(".hero__images .left", {
 gsap.to(".hero__images .right", {
    scrollTrigger: {
       trigger: ".hero__images", // элемент, который должен запускать анимацию
-      start: "top 50%", // когда верх элемента достигает 80% высоты экрана
+      start: "top 250px", // когда верх элемента достигает 80% высоты экрана
       end: "bottom 0", // когда низ элемента достигает 20% высоты экрана
       // markers: true, // включить маркеры для визуальной отладки
       scrub: 1.5,
