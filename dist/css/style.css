@@ -3212,8 +3212,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -ms-flex-pack: distribute;
       justify-content: space-around;
   min-width: 100%;
-  -webkit-animation: scroll var(--duration) linear infinite;
-          animation: scroll var(--duration) linear infinite;
+  -webkit-animation: scroll var(--duration) linear infianite;
+          animation: scroll var(--duration) linear infianite;
 }
 
 .marquee__group li {
