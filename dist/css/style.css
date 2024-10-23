@@ -3066,7 +3066,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 104px;
+  gap: 24px;
 }
 
 .footer__upper {
@@ -3159,6 +3159,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   width: 330px;
 }
 
+.running-line__item.mor img {
+  width: 200px;
+}
+
 .runeline {
   overflow: hidden;
   display: -webkit-box;
@@ -3212,10 +3216,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           animation: scroll var(--duration) linear infinite;
 }
 
+.marquee__group li {
+  height: 100%;
+}
+
 .marquee__group a {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes scroll {
@@ -3905,7 +3920,7 @@ body.lock {
 
 .case__subtitle {
   margin-top: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -4438,6 +4453,10 @@ body.lock {
 
   .footer__list.second {
     display: none;
+  }
+
+  .running-line__item.mor img {
+    width: 120px !important;
   }
 
   .modal__close {

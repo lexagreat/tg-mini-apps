@@ -4,6 +4,14 @@ $duration: 10s;
    &__item {
       list-style: none;
       width: 330px;
+      &.mor {
+         img {
+            width: 200px;
+            @media (max-width: 1024px) {
+               width: 120px !important;
+            }
+         }
+      }
    }
 }
 
@@ -41,8 +49,14 @@ $duration: 10s;
    justify-content: space-around;
    min-width: 100%;
    animation: scroll var(--duration) linear infinite;
+   li {
+      height: 100%;
+   }
    a {
+      height: 100%;
       display: flex;
+      align-items: center;
+      justify-content: center;
    }
 }
 
